@@ -4,18 +4,25 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: rgb(241, 240, 240);
+    background-color: #e0e0e0;
+
 }
 
 .clock {
+    padding: 20px;
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    border-radius: 50%;
+    background: #e0e0e0;
+    box-shadow: inset 5px 5px 10px #bebebe,
+        inset -5px -5px 10px #ffffffc5;
 }
+
 
 .clock::before {
     content: '';
@@ -31,7 +38,7 @@
 .clock span {
     position: absolute;
     inset: 90px;
-    color: black;
+    color: #807f7f;
     text-align: center;
     margin: 0;
     font-weight: 600;
@@ -151,11 +158,14 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    z-index: 10;
+    z-index: 9;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffffc5;
 }
 
 .circle2 {
@@ -163,7 +173,11 @@
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    border: 1px solid black;
+    border-radius: 50%;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffffc5;
 }
 
 .circle3 {
@@ -171,7 +185,11 @@
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 1px solid black;
+    border-radius: 50%;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffffc5;
 }
 
 .circle i {
@@ -189,23 +207,52 @@
 }
 
 .circle2 i {
-    background-color: yellow;
+    background-color: rgb(253, 253, 64);
     width: 6px;
     z-index: 9;
 }
 
 .circle3 i {
-    background-color: red;
+    background-color: rgb(255, 71, 71);
+    width: 2;
     z-index: 8;
 }
 
-.circle::before{
+.circle1::before {
     content: '';
-    position:absolute;
+    position: absolute;
     width: 15px;
     height: 15px;
-    background-color: rgb(0, 255, 149);
+    background-color: greenyellow;
     border-radius: 50%;
-    box-shadow: 0px 0px 20px rgb(0, 255, 149);
+    opacity: 0.75;
+    box-shadow: 0px 0px 20px 2px rgb(153, 255, 0);
     top: -8.5px;
+
+}
+
+.circle2::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(253, 253, 64);
+    border-radius: 50%;
+    opacity: 0.75;
+    box-shadow: 0px 0px 20px 2px rgb(255, 255, 0);
+    top: -8.5px;
+
+}
+
+.circle3::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 71, 71);
+    border-radius: 50%;
+    opacity: 0.75;
+    box-shadow: 0px 0px 20px 2px rgb(247, 0, 0);
+    top: -8.5px;
+
 }
