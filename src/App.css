@@ -1,38 +1,211 @@
 .App {
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(241, 240, 240);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clock {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clock::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(241, 240, 240);
+    border: 5px solid black;
+    width: 8px;
+    height: 8px;
+    z-index: 100000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.clock span {
+    position: absolute;
+    inset: 90px;
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    font-size: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+.clock span:nth-child(1) {
+    transform: rotate(calc(30deg * 1));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clock span:nth-child(2) {
+    transform: rotate(calc(30deg * 2));
+}
+
+.clock span:nth-child(3) {
+    transform: rotate(calc(30deg * 3));
+}
+
+.clock span:nth-child(4) {
+    transform: rotate(calc(30deg * 4));
+}
+
+.clock span:nth-child(5) {
+    transform: rotate(calc(30deg * 5));
+}
+
+.clock span:nth-child(6) {
+    transform: rotate(calc(30deg * 6));
+}
+
+.clock span:nth-child(7) {
+    transform: rotate(calc(30deg * 7));
+}
+
+.clock span:nth-child(8) {
+    transform: rotate(calc(30deg * 8));
+}
+
+.clock span:nth-child(9) {
+    transform: rotate(calc(30deg * 9));
+}
+
+.clock span:nth-child(10) {
+    transform: rotate(calc(30deg * 10));
+}
+
+.clock span:nth-child(11) {
+    transform: rotate(calc(30deg * 11));
+}
+
+.clock span:nth-child(12) {
+    transform: rotate(calc(30deg * 12));
+}
+
+.primeiro {
+    transform: rotate(calc(-30deg * 1));
+    display: inline-block;
+}
+
+.segundo {
+    transform: rotate(calc(-30deg * 2));
+    display: inline-block;
+}
+
+.terceiro {
+    transform: rotate(calc(-30deg * 3));
+    display: inline-block;
+}
+
+.quarto {
+    transform: rotate(calc(-30deg * 4));
+    display: inline-block;
+}
+
+.quinto {
+    transform: rotate(calc(-30deg * 5));
+    display: inline-block;
+}
+
+.sexto {
+    transform: rotate(calc(-30deg * 6));
+    display: inline-block;
+}
+
+.setimo {
+    transform: rotate(calc(-30deg * 7));
+    display: inline-block;
+}
+
+.oitavo {
+    transform: rotate(calc(-30deg * 8));
+    display: inline-block;
+}
+
+.nono {
+    transform: rotate(calc(-30deg * 9));
+    display: inline-block;
+}
+
+.decimo {
+    transform: rotate(calc(-30deg * 10));
+    display: inline-block;
+}
+
+.decimo-primeiro {
+    transform: rotate(calc(-30deg * 11));
+    display: inline-block;
+}
+
+.decimo-segundo {
+    transform: rotate(calc(-30deg * 12));
+    display: inline-block;
+}
+
+.circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle2 {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.circle3 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.circle i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle1 i {
+    background-color: greenyellow;
+    width: 2px;
+}
+
+.circle2 i {
+    background-color: yellow;
+    width: 6px;
+    z-index: 9;
+}
+
+.circle3 i {
+    background-color: red;
+    z-index: 8;
+}
+
+.circle::before{
+    content: '';
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 255, 149);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgb(0, 255, 149);
+    top: -8.5px;
 }
